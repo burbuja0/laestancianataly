@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>LA ESTANCIA</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #003366;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 3em;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        hr {
+            width: 60%;
+            border: 1px solid white;
+            margin-bottom: 30px;
+            animation: fadeIn 2s;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            width: 300px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            transition: transform 0.3s;
+        }
+
+        input:focus {
+            transform: scale(1.03);
+            box-shadow: 0 0 10px white;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #003366;
+            background-color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #ddd;
+            transform: scale(1.05);
+        }
+
+        .icon {
+            margin-right: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1><i class="fas fa-store icon"></i>LA ESTANCIA</h1>
+    <hr>
+
+    <form>
+        <label><i class="fas fa-user icon"></i>TU NOMBRE</label>
+        <input type="text" placeholder="Escribe tu nombre">
+
+        <label><i class="fas fa-phone icon"></i>TELÉFONO</label>
+        <input type="number" placeholder="Escribe tu número">
+
+        <label><i class="fas fa-map-marker-alt icon"></i>DIRECCIÓN</label>
+        <input type="text" placeholder="Dirección de entrega">
+
+        <label><i class="fas fa-box icon"></i>PRODUCTO</label>
+        <input type="text" placeholder="Producto a pedir">
+
+        <label><i class="fas fa-sort-numeric-up icon"></i>CANTIDAD</label>
+        <input type="number" placeholder="Cantidad deseada">
+
+        <button type="submit"><i class="fas fa-check icon"></i>PEDIR</button>
+        <button type="reset"><i class="fas fa-times icon"></i>CANCELAR</button>
+    </form>
+
+</body>
+</html>
